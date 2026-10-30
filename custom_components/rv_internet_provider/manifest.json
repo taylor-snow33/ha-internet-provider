@@ -1,0 +1,14 @@
+{
+  "domain": "rv_internet_provider",
+  "name": "RV Internet Provider",
+  "version": "0.1.0",
+  "config_flow": true,
+  "documentation": "https://github.com/taylor-snow33/ha-internet-provider",
+  "iot_class": "cloud_polling",
+  "integration_type": "service",
+  "requirements": [],
+  "codeowners": [
+    "@taylor-snow33"
+  ],
+  "issue_tracker": "https://github.com/taylor-snow33/ha-internet-provider/issues"
+}

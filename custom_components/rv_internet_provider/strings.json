@@ -1,0 +1,29 @@
+{
+  "title": "RV Internet Provider",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Track this Home Assistant connection",
+        "description": "Look up the public IP used by this Home Assistant server through IPWhois. The service sees your outgoing public IP. Location is approximate network geolocation, not RV GPS. Polls every 5 minutes by default. No API key is needed."
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to retrieve valid lookup data. Check internet access and try later.",
+      "rate_limited": "IPWhois rate limit reached. Wait for the provider quota to reset before retrying."
+    },
+    "abort": {
+      "already_configured": "The current internet connection is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling settings",
+        "description": "One request updates all entities. 300 seconds is 288 requests/day. Shared public IPs may share the provider quota.",
+        "data": {
+          "poll_interval": "Polling interval (seconds, 300\u20133600)"
+        }
+      }
+    }
+  }
+}
